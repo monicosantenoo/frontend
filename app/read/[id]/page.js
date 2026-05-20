@@ -40,7 +40,7 @@ export default function ReadBook() {
     try {
 
       const res = await axios.get(
-        `http://localhost:5000/api/books/${params.id}`
+        `${process.env.NEXT_PUBLIC_API_URL}/api/books/${params.id}`
       );
 
       setBook(res.data);

@@ -42,7 +42,7 @@ export default function Library() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/books"
+        `${process.env.NEXT_PUBLIC_API_URL}/api/books`
       );
 
       setBooks(res.data);
